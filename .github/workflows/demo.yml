@@ -1,25 +1,24 @@
-name: Pipeline CI
+name: Démonstration Pipeline CI
 
 on:
   push:
     branches:
-      - master
-
+      - main
 jobs:
   demo:
-    name: job-demo
+    name: Jobs Demo
     runs-on: ubuntu-latest
-    
     steps:
       - name: Première étape
-      - run: echo Hello !
-      - name: | 
-          echo Voici
-          echo un script plus compliqué
+        run: echo Hello!
 
+      - name: Script plus complexe
+        run: |
+          echo "Début du script"
+          echo "Étape 1: Clone le dépôt"
 test:
-  needs: demo
   runs-on: ubuntu-latest
   steps:
-  - name: Deuxième étape
-    run: echo L étape 2
+    - name: Etape 2
+        run: |
+           echo "Étape 2: Exécute les tests"
