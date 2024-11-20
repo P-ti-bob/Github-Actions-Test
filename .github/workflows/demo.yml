@@ -1,0 +1,24 @@
+name: Pipeline CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  demo:
+    name: job-demo
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Première étape
+      - run: echo Hello !
+      - name: | 
+          echo Voici
+          echo un script plus compliqué
+
+test:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Deuxième étape
+    run: echo L étape 2
