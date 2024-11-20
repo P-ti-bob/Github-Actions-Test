@@ -17,10 +17,8 @@ jobs:
           echo "Début du script"
           echo "Étape 1: Clone le dépôt"
 test:
+  needs: demo
   runs-on: ubuntu-latest
   steps:
     - name: Récupération code source
-      users: actions/checkout@v4
-    - name: Etape 2
-        run: |
-           echo "Étape 2: Exécute les tests"
+      uses: actions/checkout@v4
