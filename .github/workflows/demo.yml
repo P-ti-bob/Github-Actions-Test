@@ -3,7 +3,7 @@ name: Démonstration Pipeline CI
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   demo:
     name: Jobs Demo
