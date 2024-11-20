@@ -18,6 +18,7 @@ jobs:
           echo un script plus compliqué
 
 test:
+  needs: demo
   runs-on: ubuntu-latest
   steps:
   - name: Deuxième étape
